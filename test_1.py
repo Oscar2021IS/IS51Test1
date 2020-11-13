@@ -1,6 +1,5 @@
 
 
-
 """
 The program is trying to determine which payment option is better (more money).
 First option is 100 dollars per day for 10 days. The second option is 1 dollars a day with it being each day for 10 days.
@@ -20,7 +19,7 @@ if the option2 is better, we output to the user " Option 2 is better"
 Option1
 return 100 * 10
 
-#Option2
+# Option2
 amount = 1
 List1 = []
 loop 10 times
@@ -28,7 +27,7 @@ add aount to list1
 amount *= 2
 sum = sum of all items in loop
 return sum
-#main
+# main
 var1 = option 1
 var2 = option 1
 
@@ -42,3 +41,35 @@ if var1 < var2
 
 main
 """
+
+
+def option1():
+    return 100 * 10
+
+
+def option2():
+    amount = 1
+    list1 = []
+    for i in range(0, 10):
+        list1.append(amount)
+        amount *= 2
+        total = sum(list1)
+    return total
+
+
+def main():
+    answer = " "
+
+
+var1 = option1()  
+var2 = option2() 
+if var1 == var2:
+    answer = "Option 1 and Option 2 pays the same."
+elif var1 < var2:
+    answer = "Option 2 is better."
+else:
+    answer = "Option 1 is better."
+print(answer)
+
+
+main()
